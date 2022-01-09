@@ -1,0 +1,58 @@
+﻿@model BlogSite.Models.AuthorModel
+@{
+    ViewBag.Title = "EditAuthor";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">Kullanıcı Ekle</div>
+        <hr>
+        <form action="/EditAuthor/@Model.AuthorId">
+            <div class="form-group">
+                <label for="input-1">Ad Soyad</label>
+                <input type="text" class="form-control" name="NameSurname" id="input-1" value="@Model.AuthorName" placeholder="Ad" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-2">Email</label>
+                <input type="text" class="form-control" name="Email" id="input-2" value="@Model.AuthorEmail" placeholder="Email" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-3">Şifre</label>
+                <input type="password" class="form-control" name="Password" id="input-3" value="@Model.AuthorPassword" placeholder="Şifre" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-4">Hakkında</label>
+                <input type="text" class="form-control" name="AuthorAbout" id="input-4" value="@Model.AuthorAbout" placeholder="Hakkında" maxlength="250">
+            </div>
+            <div class="form-group">
+                <label for="input-5">Twitter</label>
+                <input type="text" class="form-control" name="TwitterAdress" id="input-5" value="@Model.AuthorTwitter" placeholder="Twitter" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-6">Instagram</label>
+                <input type="text" class="form-control" name="InstagramAdress" id="input-6" value="@Model.AuthorInstagram" placeholder="İnstagram" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-7">Facebook</label>
+                <input type="text" class="form-control" name="FacebookAdress" id="input-7" value="@Model.AuthorFacebook" placeholder="Facebook" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-8">Image</label>
+                <input type="text" class="form-control" name="Image" id="input-8" value="@Model.AuthorImage" placeholder="IMG" maxlength="50">
+            </div>
+            <label for="input-9">Kullanıcı Türü:</label>
+            <div class="radio">
+                <input type="radio" id="1" class="flat" name="AdminRadio" value="Admin">
+                <label for="1"> Admin</label>
+
+                <input type="radio" id="2" class="flat" checked name="AdminRadio" value="Author">
+                <label for="2"> Author</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>

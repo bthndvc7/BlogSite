@@ -1,0 +1,44 @@
+﻿
+@{
+   ViewBag.Title = "CreateArticle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">Kullanıcı Ekle</div>
+        <hr>
+        <form action="/CreateArticle">
+            
+            <div class="form-group">
+                <label for="input-5">Başlık</label>
+                <input type="text" class="form-control" name="Title" id="input-5" placeholder="Başlık" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-6">Etiketler</label>
+                <input type="text" class="form-control" name="Tags" id="input-6" placeholder="Etiketler" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label>Kategori Seçiniz:</label>
+
+                    <select class="form-control" name="CategorName">
+                        <option>Seyahat</option>
+                        <option>Alisveris</option>
+                        <option>Eglence</option>
+                    </select>
+
+            </div>
+            <div class="form-group">
+                <label for="input-8">Foto</label>
+                <input type="text" class="form-control" name="ImageUrl" id="input-8" placeholder="IMG" maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="input-9">Entry</label>
+                <textarea class="form-control" name="Content" ></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary shadow-primary px-5"><i class="icon-lock"></i> Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>
